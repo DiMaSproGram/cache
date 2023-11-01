@@ -1,17 +1,49 @@
 {
   "name": "cache-test",
+  "proxy": "http://localhost:3000",
+  "homepage": "/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.22.15",
+    "@babel/preset-env": "^7.22.15",
+    "@babel/preset-react": "^7.22.15",
+    "@babel/register": "^7.22.15",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.5.0",
+    "babel-cli": "^6.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "8.1.0",
+    "babel-node": "^0.0.1-security",
+    "babel-plugin-react-css-modules": "^5.2.6",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-es2015": "^6.0.0",
+    "babel-register": "^6.26.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "file-saver": "^2.0.5",
+    "gatsby": "^5.12.4",
+    "ignore-styles": "^5.0.1",
+    "next": "^13.4.19",
+    "puppeteer": "^21.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "react-meta-tags": "^1.0.1",
+    "react-native-fetch-blob": "^0.10.8",
+    "react-router-dom": "^6.15.0",
+    "react-scripts": "4.0.2",
+    "styled-components": "^6.0.7",
+    "web-vitals": "^2.1.4",
+    "webpack": "4.44.2",
+    "yargs": "^17.7.2"
   },
   "scripts": {
+    "start2": "babel-node --presets @babel/preset-react server.js",
+    "ssr": "node server.js",
+    "ssr2": "babel-node server.js",
+    "start3": "node index.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -34,5 +66,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-transform-import-css": "^1.0.0-alpha.11"
   }
 }
